@@ -59,6 +59,7 @@ const RingProgress = ({
       <SVG>
         {/* animated progress ring */}
         <AnimatedCircle animatedProps={animatedProps} {...circleDefaultProps} />
+        {/* arrow icon */}
         <AntDesign
           name="arrowright"
           size={strokeWidth * 0.8}
