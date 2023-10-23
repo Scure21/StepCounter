@@ -6,6 +6,7 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
+import { AntDesign } from "@expo/vector-icons";
 
 type RingProgressProps = {
   radius?: number;
@@ -58,7 +59,16 @@ const RingProgress = ({
       <SVG>
         {/* animated progress ring */}
         <AnimatedCircle animatedProps={animatedProps} {...circleDefaultProps} />
-
+        <AntDesign
+          name="arrowright"
+          size={strokeWidth * 0.8}
+          color="black"
+          style={{
+            position: "absolute",
+            alignSelf: "center",
+            top: strokeWidth * 0.1,
+          }}
+        />
         {/* background ring */}
         <Circle {...circleDefaultProps} opacity={0.2} />
       </SVG>
