@@ -1,11 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import HealthData from "./components/HealthData";
+import RingProgress from "./components/RingProgress";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hi Steph!!</Text>
+      <RingProgress progress={0.25} />
 
       <View style={styles.dataContainer}>
         <HealthData label="Steps" value="1,000" />
@@ -29,5 +30,6 @@ const styles = StyleSheet.create({
     gap: 55,
     flexDirection: "row",
     flexWrap: "wrap",
+    marginVertical: 20,
   },
 });
