@@ -88,7 +88,7 @@ const useHealthData = (date: Date) => {
   }, [hasPermissions, date]);
 
   return {
-    steps: steps.toFixed(0),
+    steps,
     flights,
     distance,
   };

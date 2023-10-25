@@ -42,7 +42,7 @@ export default function App() {
       <RingProgress progress={steps / STEPS_GOAL} />
 
       <View style={styles.dataContainer}>
-        <HealthData label="Steps" value={steps.toString()} />
+        <HealthData label="Steps" value={steps.toFixed(0)} />
         <HealthData
           label="Distance"
           value={`${(distance / 1000).toFixed(2)} km`}
