@@ -15,8 +15,11 @@ export default function App() {
 
       <View style={styles.dataContainer}>
         <HealthData label="Steps" value={steps.toString()} />
-        <HealthData label="Distance" value={`${distance / 1000} km`} />
-        <HealthData label="Flights Climbed" value={flights} />
+        <HealthData
+          label="Distance"
+          value={`${(distance / 1000).toFixed(2)} km`}
+        />
+        <HealthData label="Flights Climbed" value={flights.toString()} />
       </View>
 
       <StatusBar style="auto" />

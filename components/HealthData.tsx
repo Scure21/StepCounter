@@ -3,7 +3,7 @@ import React from "react";
 
 type HealthDataProps = {
   label: string;
-  value: string | number;
+  value: string;
 };
 
 const HealthData = ({ label, value }: HealthDataProps) => {
