@@ -2,16 +2,21 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import HealthData from "./components/HealthData";
 import RingProgress from "./components/RingProgress";
+import useHealthData from "./hooks/useHealthData";
+
+const STEPS_GOAL = 10000;
 
 export default function App() {
+  const { steps, distance, flights } = useHealthData();
+
   return (
     <View style={styles.container}>
-      <RingProgress progress={0.6} />
+      <RingProgress progress={6000 / STEPS_GOAL} />
 
       <View style={styles.dataContainer}>
-        <HealthData label="Steps" value="1,000" />
-        <HealthData label="Distance" value="1.2 km" />
-        <HealthData label="Flights Climbed" value="3" />
+        <HealthData label="Steps" value={steps.toString()} />
+        <HealthData label="Distance" value={`${distance / 1000} km`} />
+        <HealthData label="Flights Climbed" value={flights} />
       </View>
 
       <StatusBar style="auto" />
